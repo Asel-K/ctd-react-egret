@@ -20,7 +20,7 @@ Grading for this project is less rigid, given the open-ended instructions ([View
 - [Lesson 1.6](instructions/section-1/lesson-1-6.md)
 - [Lesson 1.7](instructions/section-1/lesson-1-7.md)
 - [Lesson 1.8](instructions/section-1/lesson-1-8.md)
-- [Lesson 1.9](instructions/section-1/lesson-1-9.md)
+- [Lesson 1.9](instructionsle/section-1/lesson-1-9.md)
 
 ### **Section 2:** React Legacy
 
