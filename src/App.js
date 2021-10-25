@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
 
@@ -9,15 +9,21 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    new Promise((resolve, reject) => {
-      setTimeout(
-        () => resolve({ data: { todoList: initialTodoList } }),
-        2000
-      );
-    }).then((result) => {
-      setTodoList(result.data.todoList);
-      setIsLoading(false)
-    })
+
+    fetch(
+      `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/Default`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+        },
+      }
+    )
+
+      .then((resp) => resp.json())
+      .then((data) => {
+        setTodoList(data.records);
+        setIsLoading(false)
+      })
 
   }, []);
 
