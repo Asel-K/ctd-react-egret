@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TodoList from './TodoList';
 import AddTodoForm from './AddTodoForm';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const initialTodoList = JSON.parse(localStorage.getItem('savedTodoList'));
 
@@ -41,7 +42,11 @@ function App() {
     setTodoList(newTodoList);
   };
 
+  
   return (
+    <BrowserRouter>
+    <Switch>
+      <Route exact path="/">
     <>
       <h1>Todo List</h1>
       <AddTodoForm onAddTodo={addTodo} />
@@ -51,7 +56,15 @@ function App() {
         <TodoList todoList={todoList} onRemoveTodo={removeTodo} />
       )}
     </>
+    </Route>
+
+    <Route path="/new">
+      <h1>New Todo List</h1>
+    </Route>
+    </Switch>
+    </BrowserRouter>
   );
+  
 }
 
 export default App;
