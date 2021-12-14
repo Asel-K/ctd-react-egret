@@ -1,0 +1,78 @@
+.navBar{
+    box-sizing: border-box;
+    background-color: #303030;
+    color: var(--clr-light);
+    width: 15%; 
+    height: 100vh;
+    display: inline-block;
+    vertical-align: top;
+    font-family: var(--ff-primary);
+}
+
+.navBarList {
+    height:auto;
+    padding: 0;
+    width: 100%;
+    font-family: var(--ff-primary);
+}
+
+.navBarList .row {
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid white; */
+    margin: 0%;
+    display: flex;
+    flex-direction:row;
+    color: var(--clr-light);
+    justify-content: left;
+    align-items: center;
+    font-family: var(--fs-body);
+    padding-left: 35px;
+}
+
+/* HoverEffect on navbar  */
+.navBarList .row:hover{
+    cursor: pointer;
+    background-color: #6b705c;
+}
+
+
+.navBarList .icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+
+.text {
+    flex: 70%;
+    padding-left: 50px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-light);
+    display: inline-flex;
+    padding-right: 20px;
+}
+
+.homePageDisplay {
+    box-sizing: border-box;
+    background-color: var(--clr-dark);
+    background-image: url(./eberhard.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: var(--clr-light);
+    display:inline-block;
+    height: 100vh;
+    width: calc(100vw - 300px);
+    margin: 0;
+    margin-left: 0;
+    padding: 2rem 4rem;
+}
+
