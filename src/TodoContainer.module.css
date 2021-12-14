@@ -1,0 +1,30 @@
+.Container {
+    box-sizing: border-box;
+    background-color: var(--clr-dark);
+    background-image: url(./eberhard.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: var(--clr-light);
+    display:inline-block;
+    height: 100vh;
+    width: 80%;
+
+}
+h1 {
+    text-align: left;
+    padding-left: 60px;
+
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 3rem;
+
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    margin-left: 9rem;
+
+
+
+  }
+

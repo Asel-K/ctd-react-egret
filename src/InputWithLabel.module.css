@@ -1,0 +1,25 @@
+.InputLabel {
+    padding-right: 20px;
+    border: none;
+    width: 60%;
+    
+    
+}
+
+.Input::placeholder{
+    color: #6b705c;
+    font-size: 1rem;
+    background-color: var(--clr-dark);
+    border: none;
+    width: 100%;
+    
+    
+}
+.Input{
+    border: none;
+    width: 150%;
+    background-color: var(--clr-dark);
+    margin-left: -15rem;
+
+}
+

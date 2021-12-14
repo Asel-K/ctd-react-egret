@@ -1,0 +1,22 @@
+.ListItem {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-size: var(--ff-primary);
+    font-weight: var(--fs-body);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-left: 3rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-left: 6rem;
+    width:70%;
+}
+.RemoveButton{
+    border: none;
+    appearance: none;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding-right: 2rem;
+}

@@ -1,8 +1,11 @@
+// import { style } from '@mui/system';
 import React, { useState} from 'react';
 import InputWithLabel from './InputWithLabel';
+import style from "./AddTodoForm.module.css";
 
 function AddTodoForm({onAddTodo}) {
     const [todoTitle, setTodoTitle] = useState(''); 
+
     const handleTitleChange = (event) => {
         const newTodoTitle = event.target.value;
         setTodoTitle(newTodoTitle);
@@ -10,21 +13,22 @@ function AddTodoForm({onAddTodo}) {
 
     const handleAddTodo = (event) => {
         event.preventDefault();
-        console.log(todoTitle);
-        onAddTodo({title: todoTitle, id: Date.now()}); //new todo
+        onAddTodo (todoTitle);
         setTodoTitle('');
     };
     return (
-        <form onSubmit={handleAddTodo}> 
-            <InputWithLabel
+        <div className={style.form}>
+        <form className={style.formInputAdd} onSubmit={handleAddTodo}> 
+            <InputWithLabel className={style.InputWithLabel}
                 todoTitle={todoTitle}
                 handleTitleChange={handleTitleChange} 
             >
-                Title:
+                
             </InputWithLabel>
                 
-            <button type="submit">Add</button>
+            <button className={style.AddButton} type="submit">Add</button>
         </form>   
+        </div>
     );
 }
 
