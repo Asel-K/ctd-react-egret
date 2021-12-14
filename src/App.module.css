@@ -64,7 +64,7 @@ a {
 .homePageDisplay {
     box-sizing: border-box;
     background-color: var(--clr-dark);
-    background-image: url(./eberhard.jpg);
+    background-image: url(./components/eberhard.jpg);
     background-blend-mode: multiply;
     background-size: cover;
     color: var(--clr-light);

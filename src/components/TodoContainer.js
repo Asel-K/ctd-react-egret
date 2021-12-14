@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AddTodoForm from "./AddTodoForm";
 import TodoList from "./TodoList";
-import style from "./TodoContainer.module.css"
+import style from "./TodoContainer.module.css";
+import PropTypes from 'prop-types';
 
 function  TodoContainer ({tableName}) {
     const [todoList, setTodoList] = useState([])
@@ -87,4 +88,7 @@ function  TodoContainer ({tableName}) {
     ) 
 }
  
+TodoContainer.propTypes = {
+    tableName: PropTypes.string
+}
 export default TodoContainer;
