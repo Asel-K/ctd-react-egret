@@ -4,15 +4,23 @@ import TodoList from "./TodoList";
 import style from "./TodoContainer.module.css";
 import PropTypes from 'prop-types';
 
+const sortTodoItems = (objectA, objectB) => {
+    if (objectA.fields.Title < objectB.fields.Title) {
+        return -1
+    } else if (objectA.fields.Title === objectB.fields.Title) {
+        return 0
+    } else {
+        return 1
+    }
+}
+
 function  TodoContainer ({tableName}) {
     const [todoList, setTodoList] = useState([])
     const [isLoading, setIsLoading] = useState (true)
 
     useEffect(() => {
         fetch(
-            `https://api.airtable.com/v0/${
-                process.env.REACT_APP_AIRTABLE_BASE_ID
-            }/${encodeURIComponent(tableName)}`,
+            `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/${encodeURIComponent(tableName)}?view=Grid%20view&sort[0][field]=Title&sort[0][direction]=asc`,
             {
                 method: 'GET',
                 headers: {
@@ -23,6 +31,7 @@ function  TodoContainer ({tableName}) {
 
         .then((resp) => resp.json())
         .then((data) => {
+            data.records.sort(sortTodoItems)
             setTodoList(data.records)
             setIsLoading(false)
         })
@@ -50,7 +59,11 @@ function  TodoContainer ({tableName}) {
 } )
         .then((resp) => resp.json())
         .then((data) => {
-            setTodoList([...todoList, ...data.records])
+            const addedItem = data.records[0];
+            const newTodoList = [...todoList, addedItem];
+            newTodoList.sort(sortTodoItems)
+            // setTodoList([...todoList, ...data.records])
+            setTodoList(newTodoList)
         })
     }
 
