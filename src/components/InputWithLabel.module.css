@@ -23,3 +23,20 @@
 
 }
 
+@media (width: 375px) {
+    .Input {
+        width: 94%;
+        margin-left: -5rem;
+    }
+}
+
+@media (width: 768px) {
+    .Input {
+        width: 82%;
+    }
+}
+@media (max-width: 1024px) {
+    .Input {
+        width: 79%;
+    }
+}

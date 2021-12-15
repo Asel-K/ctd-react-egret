@@ -20,3 +20,28 @@
     color: var(--clr-light);
     padding-right: 2rem;
 }
+
+@media (width: 375px) {
+    .ListItem {
+        font-size: 15px;
+
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem;
+        padding-left: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        margin-right: 0;
+        margin-left: 0;
+        width:90%;
+    }
+    .RemoveButton {
+        border: none;
+        appearance: none;
+        background-color: var(--clr-dark);
+        color: var(--clr-light);
+        padding-right: 1rem;
+        font-size: 10px;
+    }
+    
+}

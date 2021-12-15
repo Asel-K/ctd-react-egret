@@ -24,7 +24,35 @@ h1 {
     margin-bottom: 1rem;
     margin-left: 9rem;
 
-
-
   }
 
+@media (max-width:1000px){
+    .Container {
+        width: 80%;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media (width: 375px) {
+    .Container {
+        width: 78.5%;
+        font-size: 14px;
+    }
+    h1{
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+}
+
+@media (width: 768px) {
+    .Container {
+        width: 88%;
+    }
+    h1{
+        font-size: 1.5rem;
+        padding: 2rem 0rem;
+        width:50%;
+    }
+}
