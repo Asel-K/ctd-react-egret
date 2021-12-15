@@ -8,13 +8,15 @@
     margin-right: 2rem;
     margin-left: 8.8rem;
     display: inline-block;
-    width: 68%;
+    width: 66%;
     margin-bottom: 5rem;
     /* color: var(--clr-accent);
     font-size: 1.25rem; */
     display: flex;
     justify-content: space-between;
+    box-shadow: var(--bs);
 }
+
 .formInputAdd{
     display: inline-flex;
     width: 96%;
@@ -42,4 +44,22 @@
     padding-right: 20px;
     width: 60%;
     border: none;
+}
+
+@media(width: 375px){
+    .form {
+    margin-left: 2.8rem;
+    width: 75%;
+    margin-bottom: 3rem;
+}
+}
+@media(width: 1024px){
+    .form {
+        width: 66%;
+    }
+}
+@media (width: 768px) {
+    .form {
+        width: 65%;
+    }
 }
